@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Budget</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+</head>
+<body>
+    <!-- Header Area -->
+    <header>
+        <h1 class="text-5xl text-center my-8 font-bold text-blue-600">My Budget</h1>
+    </header>
+
+    <main>
+        <section class="p-6 lg:p-16 flex flex-wrap gap-12">
+            <div class="lg:w-1/2">
+                <img src="money.jpg" alt="">
+            </div>
+
+            <div class="lg:w-2/5 bg-slate-100 text-center py-8">
+                <h3 class="text-3xl text-center">Income</h3>
+                <div class="flex items-center justify-center gap-4 mt-5">
+                    <label for="income">Income :</label>
+                    <input id="income" class="py-2 px-4 bg-slate-400" type="text" placeholder="Income">
+                </div>
+                <h3 class="text-3xl text-center">Expenses</h3>
+                <div class="flex items-center justify-center gap-4 mt-5">
+                    <label for="food">Food :</label>
+                    <input id="food" class="py-2 px-4 bg-slate-400" type="text" placeholder="your amount">
+                </div>
+                <div class="flex items-center justify-center gap-4 mt-5">
+                    <label for="rent">Rent :</label>
+                    <input id="rent" class="py-2 px-4 bg-slate-400" type="text" placeholder="your amount">
+                </div>
+                <div class="flex items-center justify-center gap-4 mt-5">
+                    <label for="clothes">Clothes: :</label>
+                    <input id="clothes" class="py-2 px-4 bg-slate-400" type="text" placeholder="your amount">
+                </div>
+                <button id="counting" class="bg-sky-700 text-white text-xl px-8 py-2 rounded-md shadow-sm mt-5">Calculate</button>
+                <h3 class="text-3xl text-center pt-5">Total Expenses: <span id="expense">5500</span></h3>
+                <h3 class="text-3xl text-center pt-5">Balance: <span id="balance">4500</span></h3>
+                <div class="flex flex-wrap items-center justify-center gap-4 mt-5">
+                    <label for="save">Save</label>
+                    <input id="save" class="py-2 px-4 bg-slate-400" type="text" placeholder="20">
+                    <span>%</span>
+                    <button id="counting" class="bg-sky-700 text-white text-xl px-8 py-2 rounded-md shadow-sm">Save</button>
+                    <h3 class="text-3xl text-center pt-5">Saving Amount: <span id="saving">2000</span></h3>
+                    <h3 class="text-3xl text-center pt-5">Remaining Balance: <span id="remaining">2000</span></h3>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+</body>
+</html>

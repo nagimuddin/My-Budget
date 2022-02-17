@@ -12,6 +12,7 @@ const saveButton = document.getElementById('deposit');
 const saving = document.getElementById('saving');
 const remaining = document.getElementById('remaining');
 
+
 // Get Input value as a number
 function getInputField(number) {
     const amount = number.value;
@@ -46,8 +47,6 @@ calculate.addEventListener('click', function () {
     } else {
         alert('Please enter a Positive number');
     }
-
-    // console.log(netBalance);
 });
 
 // get percentage
@@ -74,6 +73,4 @@ saveButton.addEventListener('click', function () {
         remaining.innerHTML = totalBalance;
         alert('You Dont have enough money to save');
     }
-
-    // console.log(remainingBalance);
 });

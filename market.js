@@ -49,3 +49,31 @@ calculate.addEventListener('click', function () {
 
     // console.log(netBalance);
 });
+
+// get percentage
+function percentage(numbar, percent) {
+    return (numbar / 100) * percent;
+}
+
+// Get Total Saving and Remaining Balance
+saveButton.addEventListener('click', function () {
+    const saveAmount = getInputField(save);
+    const incomeText = getInputField(incomeInput);
+    const saveAmountText = percentage(incomeText, saveAmount);
+    const savingAmount = parseInt(saving.innerHTML);
+    saving.innerHTML = saveAmountText;
+
+    const totalBalance = parseInt(balance.innerHTML);
+    const remainingAmount = totalBalance - saveAmountText;
+
+    if (totalBalance >= saveAmountText) {
+        const remainingBalance = parseInt(remaining.innerHTML);
+        remaining.innerHTML = remainingAmount;
+    } else {
+        saving.innerHTML = 0;
+        remaining.innerHTML = totalBalance;
+        alert('You Dont have enough money to save');
+    }
+
+    // console.log(remainingBalance);
+});
